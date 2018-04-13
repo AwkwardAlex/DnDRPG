@@ -31,4 +31,8 @@ Dwarf race:
 - Abilities;
 - Enemies.
 
-
+## Start-up instructions
+- type ```git clone https://github.com/AwkwardAlex/DnDRPG.git``` into the terminal;
+- navigate to DnDRPG directory;
+- build the maven project with ```mvn package```
+- start the app with ```java -cp target/InitialRPG-1.0-SNAPSHOT.jar MainTest```
