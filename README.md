@@ -36,3 +36,8 @@ Dwarf race:
 - navigate to DnDRPG directory;
 - build the maven project with ```mvn package```
 - start the app with ```java -cp target/InitialRPG-1.0-SNAPSHOT.jar MainTest```
+
+### Alternative start-up:
+- download InitialRPG-1.0-SNAPSHOT-jar-with-dependencies.jar file;
+- navigate to directory containing downloaded file;
+- type in terminal ```java -cp InitialRPG-1.0-SNAPSHOT-jar-with-dependencies.jar MainTest```
