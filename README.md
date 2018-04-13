@@ -24,6 +24,7 @@ Dwarf race:
 - Mechanist.
 
 ## WIP
+- Executable jar file;
 - Attribue point allocation;
 - Labyrinth;
 - Movement;
