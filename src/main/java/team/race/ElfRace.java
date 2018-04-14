@@ -1,14 +1,19 @@
 package team.race;
 
 import lombok.Getter;
+import team.race.stats.RaceStats;
 
 @Getter
 public abstract class ElfRace extends AbstractRace {
 
-    private String className;
-
     public ElfRace(String className) {
-        super(15, 10, 25, 22, 18, 100);
+        super();
         this.className = className;
+        this.raceName = RaceStats.ELF.getRaceName();
+        this.charisma = RaceStats.ELF.getCharisma();
+        this.stamina = RaceStats.ELF.getStamina();
+        this.intellect = RaceStats.ELF.getIntellect();
+        this.agility = RaceStats.ELF.getAgility();
+        this.concentration = RaceStats.ELF.getConcentration();
     }
 }

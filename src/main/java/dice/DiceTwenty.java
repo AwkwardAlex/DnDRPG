@@ -1,7 +1,7 @@
 package dice;
 
 public class DiceTwenty {
-    public static final int DICE_TWENTY = 20;
+    private static final int DICE_TWENTY = 20;
     public static int roll() {
         return (int)(Math.random() * DICE_TWENTY) + 1;
     }

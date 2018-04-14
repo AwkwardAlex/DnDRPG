@@ -1,9 +1,8 @@
 package team;
 
-import jdk.nashorn.internal.objects.annotations.Getter;
 import lombok.Setter;
 import team.race.AbstractRace;
-import team.role.*;
+import team.role.UnitMap;
 import util.UserInput;
 
 import java.util.Map;

@@ -1,16 +1,18 @@
 package util;
 
 import team.race.AbstractRace;
-import team.role.*;
 import team.role.UnitMap;
 
 import java.util.Map;
-import java.util.Set;
 
 public class UserInput {
 
     private static Map<String, Map<String, AbstractRace>> raceMap = UnitMap.getRace();
     private static UserInput userInput;
+
+    private UserInput() throws IllegalStateException {
+        throw new IllegalStateException("Can't create instance of UserInput");
+    }
 
     public static UserInput getInput() {
         if (userInput == null) {
@@ -24,7 +26,7 @@ public class UserInput {
         while (true) {
             String teamName = ScannerUtil.getString();
             System.out.println("You have chosen: " + teamName +
-                    " as your team name.\nPress 1 to confirm this choice.");
+                    " as your team name.\nPress 1 to confirm this choice, or press any other button to change name");
             if ("1".equals(ScannerUtil.getString())) {
                 return teamName;
             } else {
@@ -49,7 +51,7 @@ public class UserInput {
         GameOutput.printClasses(race);
         while (true) {
             String classChoice = ScannerUtil.getString();
-            if (UnitMap.getRace().get(race).containsKey(classChoice.toLowerCase())) {
+            if (UnitMap.getRace().get(race).containsKey(classChoice)) {
                 System.out.println("You have chosen: " + UnitMap.getRace().get(race).get(classChoice).getClassName());
                 return classChoice;
             }
@@ -62,7 +64,7 @@ public class UserInput {
         String heroName;
         while (true) {
             heroName = ScannerUtil.getString();
-            System.out.println("Press 1 if you want to keep this name.");
+            System.out.println("Press 1 if you want to keep this name, or press any other button to change name.");
             if ("1".equals(ScannerUtil.getString())) {
                 return heroName;
             } else {

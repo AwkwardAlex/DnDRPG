@@ -10,6 +10,10 @@ public class GameOutput {
 
     private static Map<String, Map<String, AbstractRace>> raceMap = UnitMap.getRace();
 
+    private GameOutput() throws IllegalStateException {
+        throw new IllegalStateException("Can't create instance of GameOutput");
+    }
+
     public static void printRaces() {
         System.out.println("Chose one of three races:\n 1. Elf;\n 2. Human;\n 3. Dwarf;\n 4. View race stats.");
     }

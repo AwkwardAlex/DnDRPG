@@ -21,10 +21,15 @@ public class ScannerUtil {
     }
 
     public static int getInt() {
-        while (!getScanner().hasNextInt()) {
-            getScanner().nextLine();
-            System.err.println("Incorrect input, please try again: ");
+        while (true) {
+            int intInput;
+            if (getScanner().hasNextInt()) {
+                intInput = getScanner().nextInt();
+                return intInput;
+            } else {
+                System.err.println("Incorrect input, please try again: ");
+                getScanner().nextLine();
+            }
         }
-        return getScanner().nextInt();
     }
 }

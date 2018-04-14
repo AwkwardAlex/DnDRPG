@@ -8,13 +8,14 @@ import team.LeaderStatus;
 @Getter
 public abstract class AbstractRace implements LeaderStatus {
 
+    public String raceName;
     private String heroName;
-    private String className;
-    private int charisma;
-    private int stamina;
-    private int intellect;
-    private int agility;
-    private int concentration;
+    public String className;
+    public int charisma;
+    public int stamina;
+    public int intellect;
+    public int agility;
+    public int concentration;
     private int health;
     private double healthRegen;
     private int initiativePoints;
@@ -22,16 +23,12 @@ public abstract class AbstractRace implements LeaderStatus {
     private int level;
     private double bonusExperienceGain;
     private boolean isLeader;
+    private static final int STARTING_HEALTH = 100;
 
-    public AbstractRace(int charisma, int stamina, int intellect, int agility, int concentration, int health) {
-        this.charisma = charisma;
-        this.stamina = stamina;
-        this.intellect = intellect;
-        this.agility = agility;
-        this.concentration = concentration;
+    public AbstractRace() {
         this.initiativePoints = charisma / 2;
         this.bonusExperienceGain = charisma;
-        this.health = (health + (stamina * 2)) + concentration;
+        this.health = (STARTING_HEALTH + (stamina * 2)) + concentration;
         this.healthRegen = stamina / 4;
         this.dodgeChance = agility / 2;
     }

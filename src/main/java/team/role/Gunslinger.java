@@ -2,8 +2,8 @@ package team.role;
 
 import lombok.Getter;
 import lombok.Setter;
-import team.ManaMeter;
 import team.LeaderStatus;
+import team.ManaMeter;
 import team.race.ElfRace;
 
 @Getter

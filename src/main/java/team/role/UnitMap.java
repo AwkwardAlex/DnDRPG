@@ -1,11 +1,6 @@
 package team.role;
 
 import team.race.AbstractRace;
-import team.role.Gunslinger;
-import team.race.DwarfRace;
-import team.race.ElfRace;
-import team.race.HumanRace;
-import util.UserInput;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,7 +17,7 @@ public class UnitMap {
         return races;
     }
 
-    public static Map<String, AbstractRace> getElfHeroes() {
+    private static Map<String, AbstractRace> getElfHeroes() {
         Map<String, AbstractRace> raceHeroes = new HashMap<>();
 
         raceHeroes.put("1", new Gunslinger());
@@ -31,7 +26,7 @@ public class UnitMap {
         return raceHeroes;
     }
 
-    public static Map<String, AbstractRace> getHumanHeroes() {
+    private static Map<String, AbstractRace> getHumanHeroes() {
         Map<String, AbstractRace> raceHeroes = new HashMap<>();
 
         raceHeroes.put("1", new Priest());
@@ -40,7 +35,7 @@ public class UnitMap {
         return raceHeroes;
     }
 
-    public static Map<String, AbstractRace> getDwarfHeroes() {
+    private static Map<String, AbstractRace> getDwarfHeroes() {
         Map<String, AbstractRace> raceHeroes = new HashMap<>();
 
         raceHeroes.put("1", new Warrior());

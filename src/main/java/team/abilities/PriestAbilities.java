@@ -1,6 +1,7 @@
 package team.abilities;
 
-import dice.*;
+import dice.DiceSix;
+import dice.DiceTen;
 import lombok.Getter;
 
 @Getter

@@ -3,9 +3,9 @@ package team.role;
 import lombok.Getter;
 import lombok.Setter;
 import team.LeaderStatus;
-import team.race.HumanRace;
 import team.ManaMeter;
 import team.RageMeter;
+import team.race.HumanRace;
 
 
 @Getter

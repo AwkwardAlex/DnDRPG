@@ -3,8 +3,8 @@ package team.role;
 import lombok.Getter;
 import lombok.Setter;
 import team.LeaderStatus;
-import team.race.DwarfRace;
 import team.RageMeter;
+import team.race.DwarfRace;
 
 @Getter
 @Setter
