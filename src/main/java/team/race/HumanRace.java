@@ -27,20 +27,21 @@ public abstract class HumanRace extends AbstractRace implements UnitData, ManaMe
         calculateBonusXPGain(STARTING_XP_GAIN);
         calculateDodgeChance(STARTING_DODGE_CHANCE);
         calculateMana(STARTING_MANA);
-        calculateManaRegen(STARTING_MANA_REGEN);}
+        calculateManaRegen(STARTING_MANA_REGEN);
+    }
 
     @Override
     public void calculateIntellect(int points) {
-        calculateIntellect(points);
+        this.intellect = intellect + points;
         calculateMana(this.mana);
         calculateManaRegen(this.manaRegen);
     }
 
-    public void calculateMana(int mana) {
+    private void calculateMana(int mana) {
         this.mana = mana + intellect * 2;
     }
 
-    public void calculateManaRegen(double manaRegen) {
+    private void calculateManaRegen(double manaRegen) {
         this.manaRegen = manaRegen + (intellect / 4) + (concentration * 1.5);
     }
 }

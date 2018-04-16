@@ -2,9 +2,9 @@ package team.role;
 
 import lombok.Getter;
 import lombok.Setter;
-import team.UnitData;
 import team.ManaMeter;
 import team.RageMeter;
+import team.UnitData;
 import team.race.HumanRace;
 
 
@@ -26,11 +26,11 @@ public class Priest extends HumanRace implements UnitData, RageMeter, ManaMeter 
         calculateDodgeChance(this.getDodgeChance());
     }
 
-    public void calculateRage(int rage) {
+    private void calculateRage(int rage) {
         this.rage = rage + (agility * 4);
     }
 
-    public void calculateRageRegen(double rageRegen) {
+    private void calculateRageRegen(double rageRegen) {
         this.rageRegen = rageRegen + concentration;
     }
 }

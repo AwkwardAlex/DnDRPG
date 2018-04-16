@@ -37,11 +37,11 @@ public abstract class ElfRace extends AbstractRace implements UnitData, ManaMete
         calculateManaRegen(this.manaRegen);
     }
 
-    public void calculateMana(int mana) {
+    private void calculateMana(int mana) {
         this.mana = mana + intellect * 2;
     }
 
-    public void calculateManaRegen(double manaRegen) {
+    private void calculateManaRegen(double manaRegen) {
         this.manaRegen = manaRegen + (intellect / 4) + (concentration * 1.5);
     }
 }

@@ -35,11 +35,11 @@ public abstract class DwarfRace extends AbstractRace implements UnitData {
         calculateDodgeChance(this.getDodgeChance());
     }
 
-    public void calculateRage(int rage) {
+    private void calculateRage(int rage) {
         this.rage = rage + (agility * 4);
     }
 
-    public void calculateRageRegen(double rageRegen) {
+    private void calculateRageRegen(double rageRegen) {
         this.rageRegen = rageRegen + concentration;
     }
 }

@@ -2,8 +2,8 @@ package team.role;
 
 import lombok.Getter;
 import lombok.Setter;
-import team.UnitData;
 import team.RageMeter;
+import team.UnitData;
 import team.race.DwarfRace;
 
 @Getter

@@ -5,8 +5,6 @@ import team.race.AbstractRace;
 import team.role.UnitMap;
 import util.UserInput;
 
-import java.util.Map;
-
 @lombok.Getter
 @Setter
 public class Team {

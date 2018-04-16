@@ -1,10 +1,5 @@
 package util;
 
-import team.race.AbstractRace;
-import team.role.*;
-
-import java.util.Map;
-
 public class UserInput {
 
     private static UserInput userInput;

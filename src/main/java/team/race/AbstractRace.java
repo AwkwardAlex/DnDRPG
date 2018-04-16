@@ -9,7 +9,6 @@ import team.UnitData;
 public abstract class AbstractRace implements UnitData {
 
     public String raceName;
-    private String heroName;
     public String className;
     public int charisma;
     public int stamina;
@@ -17,13 +16,13 @@ public abstract class AbstractRace implements UnitData {
     public int agility;
     public int concentration;
     public int health;
+    private String heroName;
     private double healthRegen;
     private int initiativePoints;
     private double dodgeChance;
     private int level;
     private double bonusExperienceGain;
     private boolean isLeader;
-    private static final int STARTING_HEALTH = 100;
 
     public AbstractRace() {
     }
@@ -66,7 +65,7 @@ public abstract class AbstractRace implements UnitData {
     }
 
     public void calculateLevel(int level) {
-        this.level =+ level;
+        this.level = +level;
     }
 
     public void calculateCharisma(int points) {

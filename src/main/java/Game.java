@@ -1,6 +1,5 @@
 import team.Team;
 import util.GameOutput;
-import util.ScannerUtil;
 import util.StatAllocation;
 import util.UserInput;
 

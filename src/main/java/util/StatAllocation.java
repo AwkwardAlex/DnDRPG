@@ -4,8 +4,6 @@ import team.Team;
 
 public class StatAllocation {
 
-    private static final int BONUS_POINTS = 10;
-
     /* Basic stat allocation feature
         Which will be reworked in the nearest future
      */
