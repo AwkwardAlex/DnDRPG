@@ -1,6 +1,6 @@
 package team;
 
 public interface RageMeter {
-    int rage = 100;
-    double rageRegen = 0;
+    int STARTING_RAGE = 100;
+    double STARTING_RAGE_REGEN = 0;
 }

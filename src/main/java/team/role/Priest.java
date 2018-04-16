@@ -2,7 +2,7 @@ package team.role;
 
 import lombok.Getter;
 import lombok.Setter;
-import team.LeaderStatus;
+import team.UnitData;
 import team.ManaMeter;
 import team.RageMeter;
 import team.race.HumanRace;
@@ -10,18 +10,27 @@ import team.race.HumanRace;
 
 @Getter
 @Setter
-public class Priest extends HumanRace implements LeaderStatus, RageMeter, ManaMeter {
+public class Priest extends HumanRace implements UnitData, RageMeter, ManaMeter {
 
     private int rage;
     private double rageRegen;
-    private int mana;
-    private double manaRegen;
 
     public Priest() {
         super("Priest");
-        this.rage = RageMeter.rage + (getAgility() * 4);
-        this.rageRegen = getConcentration();
-        this.mana = getIntellect() * 2;
-        this.manaRegen = (getIntellect() / 4) + (getConcentration() * 1.5);
+    }
+
+    public void calculateAgility(int points) {
+        this.agility = agility + points;
+        calculateRage(this.rage);
+        calculateRageRegen(this.rageRegen);
+        calculateDodgeChance(this.getDodgeChance());
+    }
+
+    public void calculateRage(int rage) {
+        this.rage = rage + (agility * 4);
+    }
+
+    public void calculateRageRegen(double rageRegen) {
+        this.rageRegen = rageRegen + concentration;
     }
 }

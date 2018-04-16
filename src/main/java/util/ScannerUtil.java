@@ -25,6 +25,7 @@ public class ScannerUtil {
             int intInput;
             if (getScanner().hasNextInt()) {
                 intInput = getScanner().nextInt();
+                getScanner().nextLine();
                 return intInput;
             } else {
                 System.err.println("Incorrect input, please try again: ");

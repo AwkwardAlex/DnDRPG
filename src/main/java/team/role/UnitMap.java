@@ -19,8 +19,8 @@ public class UnitMap {
     private static Map<String, AbstractRace> getElfHeroes() {
         Map<String, AbstractRace> raceHeroes = new HashMap<>();
 
-        raceHeroes.put("1", new Gunslinger());
-        raceHeroes.put("2", new Mage());
+        raceHeroes.put("1", new Mage());
+        raceHeroes.put("2", new Gunslinger());
 
         return raceHeroes;
     }

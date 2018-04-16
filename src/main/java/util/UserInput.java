@@ -51,7 +51,7 @@ public class UserInput {
         while (true) {
             GameOutput.printClasses(race);
             String classChoice = ScannerUtil.getString();
-            if ("1".equals(race) | "2".equals(race)) {
+            if ("1".equals(classChoice) | "2".equals(classChoice)) {
                 return classChoice;
             }
             System.out.println("Wrong input, please try again.");
@@ -69,6 +69,17 @@ public class UserInput {
             } else {
                 System.out.println("Enter another name.");
             }
+        }
+    }
+
+    public static int getStatPoints(int statPoint) {
+        System.out.println("Enter the number of points you want to allocate to this particular stat: ");
+        while (true) {
+            int point = ScannerUtil.getInt();
+            if (statPoint >= point && point > 0) {
+                return point;
+            }
+            System.out.println("You've entered wrong amount of points, please try again.");
         }
     }
 }

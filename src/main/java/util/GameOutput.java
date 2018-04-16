@@ -55,4 +55,9 @@ public class GameOutput {
                 " Agility - " + team.getHeroes()[i].getAgility() + ";\n" +
                 " Concentration - " + team.getHeroes()[i].getConcentration() + ".");
     }
+
+    public static void printAllocationMenu(int points) {
+        System.out.println("You have " + points + " stat points to allocate. Chose which stat you want to improve:" +
+                "\n 1. Charisma;\n 2. Stamina;\n 3. Intellect\n 4. Agility\n 5. Concentration.");
+    }
 }
