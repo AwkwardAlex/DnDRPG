@@ -15,6 +15,7 @@ public class Gunslinger extends ElfRace implements LeaderStatus, ManaMeter {
 
     public Gunslinger() {
         super("Gunslinger");
+//        this.className = className;
         this.mana = getIntellect() * 2;
         this.manaRegen = (getIntellect() / 4) + (getConcentration() * 1.5);
     }

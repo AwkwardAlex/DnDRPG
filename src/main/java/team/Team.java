@@ -12,8 +12,6 @@ import java.util.Map;
 public class Team {
     private static final int TEAM_MEMBERS = 3;
 
-    private static Map<String, Map<String, AbstractRace>> raceMap = UnitMap.getRace();
-
     private AbstractRace[] heroes;
 
     private String name;
@@ -34,12 +32,17 @@ public class Team {
     }
 
     private AbstractRace createHero() {
-        String heroName = UserInput.choseName();
-        String race = UserInput.choseRace();
-        String classChoice = UserInput.choseClass(race);
-        AbstractRace newHero = raceMap.get(race).get(classChoice);
-        newHero.setHeroName(heroName);
-        return newHero;
+        try {
+            String heroName = UserInput.choseName();
+            String race = UserInput.choseRace();
+            String classChoice = UserInput.choseClass(race);
+            AbstractRace newHero = UnitMap.getHero(race, classChoice);
+            newHero.setHeroName(heroName);
+            return newHero;
+        } catch (IllegalAccessException | InstantiationException e) {
+            System.err.println("Caught" + e);
+        }
+        return null;
     }
 
     private AbstractRace createLeader() {

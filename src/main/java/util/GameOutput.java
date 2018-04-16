@@ -1,14 +1,8 @@
 package util;
 
 import team.Team;
-import team.race.AbstractRace;
-import team.role.UnitMap;
-
-import java.util.Map;
 
 public class GameOutput {
-
-    private static Map<String, Map<String, AbstractRace>> raceMap = UnitMap.getRace();
 
     private GameOutput() throws IllegalStateException {
         throw new IllegalStateException("Can't create instance of GameOutput");
@@ -19,9 +13,25 @@ public class GameOutput {
     }
 
     public static void printClasses(String race) {
-        System.out.println("Chose one of two classes: " + "\n 1. "
-                + raceMap.get(race).get("1").getClassName() + ";\n 2. "
-                + raceMap.get(race).get("2").getClassName() + ".");
+        if ("1".equals(race)) {
+            printElfClasses();
+        } else if ("2".equals(race)) {
+            printHumanClasses();
+        } else if ("3".equals(race)) {
+            printDwarfClasses();
+        }
+    }
+
+    private static void printElfClasses() {
+        System.out.println("Chose one of two classes: " + "\n 1. Mage;\n 2. Gunslinger.");
+    }
+
+    private static void printHumanClasses() {
+        System.out.println("Chose one of two classes: " + "\n 1. Priest;\n 2. Paladin.");
+    }
+
+    private static void printDwarfClasses() {
+        System.out.println("Chose one of two classes: " + "\n 1. Warrior;\n 2. Mechanist.");
     }
 
     public static void printRaceStats() {

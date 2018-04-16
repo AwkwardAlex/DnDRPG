@@ -1,13 +1,12 @@
 package util;
 
 import team.race.AbstractRace;
-import team.role.UnitMap;
+import team.role.*;
 
 import java.util.Map;
 
 public class UserInput {
 
-    private static Map<String, Map<String, AbstractRace>> raceMap = UnitMap.getRace();
     private static UserInput userInput;
 
     private UserInput() throws IllegalStateException {
@@ -34,13 +33,14 @@ public class UserInput {
             }
         }
     }
+
     public static String choseRace() {
         while (true) {
             GameOutput.printRaces();
             String race = ScannerUtil.getString();
             if ("4".equals(race)) {
                 GameOutput.printRaceStats();
-            } else if (UnitMap.getRace().containsKey(race.toLowerCase())) {
+            } else if ("1".equals(race) | "2".equals(race) | "3".equals(race)) {
                 return race;
             } else
                 System.out.println("Choice not recognized");
@@ -48,11 +48,10 @@ public class UserInput {
     }
 
     public static String choseClass(String race) {
-        GameOutput.printClasses(race);
         while (true) {
+            GameOutput.printClasses(race);
             String classChoice = ScannerUtil.getString();
-            if (UnitMap.getRace().get(race).containsKey(classChoice)) {
-                System.out.println("You have chosen: " + UnitMap.getRace().get(race).get(classChoice).getClassName());
+            if ("1".equals(race) | "2".equals(race)) {
                 return classChoice;
             }
             System.out.println("Wrong input, please try again.");
